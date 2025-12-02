@@ -1,5 +1,5 @@
 package MovieTicketBookingSystem;
 
-public class Booking {
+public class BookingManager {
 
 }
