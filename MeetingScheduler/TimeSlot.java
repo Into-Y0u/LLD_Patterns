@@ -3,24 +3,11 @@ package MeetingScheduler;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-/**
- * Represents a time interval for meeting bookings.
- * Immutable value object that encapsulates start and end time.
- * 
- * @author Meeting Room Platform Team
- * @version 1.0
- */
+
 public class TimeSlot {
     private final LocalDateTime startTime;
     private final LocalDateTime endTime;
 
-    /**
-     * Constructs a TimeSlot with validation.
-     * 
-     * @param startTime the start time of the slot
-     * @param endTime the end time of the slot
-     * @throws IllegalArgumentException if times are invalid
-     */
     public TimeSlot(LocalDateTime startTime, LocalDateTime endTime) {
         validateTimeSlot(startTime, endTime);
         this.startTime = startTime;
@@ -42,13 +29,6 @@ public class TimeSlot {
         }
     }
 
-    /**
-     * Checks if this time slot overlaps with another time slot.
-     * Two slots overlap if one starts before the other ends.
-     * 
-     * @param other the other time slot to check against
-     * @return true if there is any overlap, false otherwise
-     */
     public boolean overlaps(TimeSlot other) {
         if (other == null) {
             return false;

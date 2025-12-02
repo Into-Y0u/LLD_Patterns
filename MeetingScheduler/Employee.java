@@ -1,21 +1,10 @@
 package MeetingScheduler;
 
-/**
- * Represents an employee in the organization.
- * Domain entity with unique identity (employeeId).
- */
 class Employee {
     private final String employeeId;
     private final String name;
     private final String email;
 
-    /**
-     * Constructs an Employee with validation.
-     * 
-     * @param employeeId unique identifier
-     * @param name employee's full name
-     * @param email employee's email address
-     */
     public Employee(String employeeId, String name, String email) {
         validateEmployee(employeeId, name, email);
         this.employeeId = employeeId;
